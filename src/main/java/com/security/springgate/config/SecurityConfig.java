@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .httpBasic(withDefaults())
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                             authorizationManagerRequestMatcherRegistry
-                                    .requestMatchers("/register/**")
+                                    .requestMatchers("/v1/api/auth/**")
                                     .permitAll()
                                     .anyRequest()
                                     .authenticated()
